@@ -1,12 +1,15 @@
+const siteHeader = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileNav = document.querySelector("#mobile-nav");
 function closeMenu() {
+  showHeader();
   mobileNav.hidden = true;
   menuToggle.setAttribute("aria-expanded", "false");
   menuToggle.setAttribute("aria-label", "打开导航");
   menuToggle.firstElementChild.textContent = "＋";
 }
 menuToggle.addEventListener("click", () => {
+  showHeader();
   const opening = mobileNav.hidden;
   mobileNav.hidden = !opening;
   menuToggle.setAttribute("aria-expanded", String(opening));
@@ -28,6 +31,63 @@ document.addEventListener("click", (event) => {
 window.matchMedia("(min-width: 651px)").addEventListener("change", (event) => {
   if (event.matches) closeMenu();
 });
+
+// Make room for reading; small scroll reversals should not flash the header.
+let previousScrollY = Math.max(0, window.scrollY);
+let directionStartY = previousScrollY;
+let scrollDirection = 0;
+let scrollFramePending = false;
+
+function showHeader() {
+  siteHeader.classList.remove("is-hidden");
+}
+
+function resetHeaderScroll() {
+  showHeader();
+  previousScrollY = Math.max(0, window.scrollY);
+  directionStartY = previousScrollY;
+  scrollDirection = 0;
+}
+
+function updateHeaderOnScroll() {
+  const currentY = Math.max(0, window.scrollY);
+  const direction = Math.sign(currentY - previousScrollY);
+  const nearTop = currentY <= Math.max(100, siteHeader.offsetHeight + 24);
+  const keyboardFocus = siteHeader.querySelector(":focus-visible");
+
+  if (nearTop || !mobileNav.hidden || keyboardFocus) {
+    showHeader();
+    directionStartY = currentY;
+    scrollDirection = 0;
+  } else if (direction !== 0) {
+    if (direction !== scrollDirection) {
+      directionStartY = previousScrollY;
+      scrollDirection = direction;
+    }
+    const distance = Math.abs(currentY - directionStartY);
+    if (direction > 0 && distance >= 24) {
+      siteHeader.classList.add("is-hidden");
+    } else if (direction < 0 && distance >= 12) {
+      showHeader();
+    }
+  }
+
+  previousScrollY = currentY;
+  scrollFramePending = false;
+}
+
+window.addEventListener(
+  "scroll",
+  () => {
+    if (scrollFramePending) return;
+    scrollFramePending = true;
+    window.requestAnimationFrame(updateHeaderOnScroll);
+  },
+  { passive: true },
+);
+siteHeader.addEventListener("focusin", resetHeaderScroll);
+window.addEventListener("resize", resetHeaderScroll, { passive: true });
+window.addEventListener("hashchange", resetHeaderScroll);
 
 const posts = [...document.querySelectorAll(".post")];
 const filters = [...document.querySelectorAll("[data-filter]")];

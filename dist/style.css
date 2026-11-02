@@ -222,6 +222,11 @@ input:focus-visible {
   top: 0;
   z-index: 30;
   background: var(--sky);
+  transition: transform 0.22s ease;
+}
+.site-header.is-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
 }
 .header-inner {
   height: 86px;
