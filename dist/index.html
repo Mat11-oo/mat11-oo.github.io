@@ -2,20 +2,21 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Mat11-oo 的个人空间。记录创作、收藏灵感，把好奇变成一些有意思的东西。"
+      content="Mat11-oo 的个人博客。写 AI 工具、行业观察与产品实践，把好奇写成文章，做成作品。"
     />
     <meta name="theme-color" content="#dceeff" />
-    <meta property="og:title" content="Mat11-oo — Stay curious. Make things." />
+    <meta property="og:title" content="Mat11-oo 的博客 · MIND POPS" />
     <meta
       property="og:description"
-      content="一点好奇，无限可能。欢迎来到我的灵感游乐场。"
+      content="一些关于 AI、产品和创作的认真观察。保持好奇，继续写下去。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mat11-oo.github.io/" />
-    <title>Mat11-oo — Stay curious. Make things.</title>
+    <title>Mat11-oo 的博客 · MIND POPS</title>
+    <link rel="canonical" href="https://mat11-oo.github.io/" />
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='1' y='1' width='62' height='62' rx='31' fill='%2355db9c' stroke='black' stroke-width='2'/%3E%3Cpath d='M16 43V21L32 37L48 21V43' fill='none' stroke='black' stroke-width='5' stroke-linejoin='round'/%3E%3C/svg%3E"
@@ -27,51 +28,44 @@
       type="font/ttf"
       crossorigin
     />
-    <link rel="preload" href="assets/blue-ribbon.png" as="image" />
-    <link rel="stylesheet" href="style.css?v=slush-2" />
-    <script src="script.js?v=slush-1" defer></script>
+    <link rel="stylesheet" href="style.css?v=blog-1" />
+    <script src="script.js?v=blog-1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">跳到主要内容</a>
-    <div class="marquee" aria-label="Stay curious. Make things. Have fun.">
+    <div class="marquee" aria-label="Stay curious. Keep writing.">
       <div class="marquee-track" aria-hidden="true">
         <span
-          >STAY CURIOUS <b>✳</b> MAKE THINGS <b>✳</b> HAVE FUN <b>✳</b> A
-          LITTLE CORNER OF THE INTERNET <b>✳</b></span
-        >
-        <span
-          >STAY CURIOUS <b>✳</b> MAKE THINGS <b>✳</b> HAVE FUN <b>✳</b> A
-          LITTLE CORNER OF THE INTERNET <b>✳</b></span
-        >
-        <span
-          >STAY CURIOUS <b>✳</b> MAKE THINGS <b>✳</b> HAVE FUN <b>✳</b> A
-          LITTLE CORNER OF THE INTERNET <b>✳</b></span
-        >
-        <span
-          >STAY CURIOUS <b>✳</b> MAKE THINGS <b>✳</b> HAVE FUN <b>✳</b> A
-          LITTLE CORNER OF THE INTERNET <b>✳</b></span
+          >STAY CURIOUS <b>✳</b> THINK OUT LOUD <b>✳</b> KEEP WRITING
+          <b>✳</b> NOTES FROM MY CORNER OF THE INTERNET <b>✳</b></span
+        ><span
+          >STAY CURIOUS <b>✳</b> THINK OUT LOUD <b>✳</b> KEEP WRITING
+          <b>✳</b> NOTES FROM MY CORNER OF THE INTERNET <b>✳</b></span
+        ><span
+          >STAY CURIOUS <b>✳</b> THINK OUT LOUD <b>✳</b> KEEP WRITING
+          <b>✳</b> NOTES FROM MY CORNER OF THE INTERNET <b>✳</b></span
+        ><span
+          >STAY CURIOUS <b>✳</b> THINK OUT LOUD <b>✳</b> KEEP WRITING
+          <b>✳</b> NOTES FROM MY CORNER OF THE INTERNET <b>✳</b></span
         >
       </div>
     </div>
     <header class="site-header">
-      <div class="header-inner">
-        <a class="brand" href="#home" aria-label="Mat11-oo 首页"
-          ><span class="brand-mark">m.</span><span>MAT11—OO</span></a
+      <div class="header-inner content-width">
+        <a class="brand" href="#home" aria-label="Mat11-oo 博客首页"
+          ><span class="brand-mark">m.</span
+          ><span>MAT11—OO<small>一个人的观察站</small></span></a
         >
         <nav class="desktop-nav" aria-label="主导航">
-          <a class="pill" href="#work">作品 / WORK</a
-          ><a class="pill" href="#about">关于 / ABOUT</a
-          ><a class="pill" href="#notes">随笔 / NOTES</a>
+          <a class="pill" href="#articles">文章 / BLOG</a
+          ><a class="pill" href="#topics">主题 / TOPICS</a
+          ><a class="pill" href="#work">项目 / BUILD</a>
         </nav>
-        <a
-          class="pill pill-black header-cta"
-          href="https://github.com/Mat11-oo"
-          target="_blank"
-          rel="noopener noreferrer"
-          >我的 GitHub <span aria-hidden="true">↗</span></a
+        <a class="pill pill-black header-cta" href="#wechat"
+          >关注公众号 <span aria-hidden="true">↗</span></a
         >
         <button
-          class="menu-toggle pill"
+          class="menu-toggle pill circle-pill"
           aria-label="打开导航"
           aria-expanded="false"
           aria-controls="mobile-nav"
@@ -80,380 +74,458 @@
         </button>
       </div>
       <nav class="mobile-nav" id="mobile-nav" aria-label="手机导航" hidden>
-        <a href="#work">作品 / WORK <span>↗</span></a
-        ><a href="#about">关于 / ABOUT <span>↗</span></a
-        ><a href="#notes">随笔 / NOTES <span>↗</span></a
-        ><a
-          href="https://github.com/Mat11-oo"
-          target="_blank"
-          rel="noopener noreferrer"
-          >我的 GitHub <span>↗</span></a
-        >
+        <a href="#articles">文章 / BLOG <span>↗</span></a
+        ><a href="#topics">主题 / TOPICS <span>↗</span></a
+        ><a href="#work">项目 / BUILD <span>↗</span></a
+        ><a href="#about">关于我 <span>↗</span></a
+        ><a href="#wechat">关注公众号 <span>↗</span></a>
       </nav>
     </header>
     <main id="main">
-      <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="hero-meta content-width">
-          <span>PERSONAL SPACE / VOL. 01</span
-          ><span>NOT PERFECT. JUST PERSONAL.</span>
-        </div>
-        <div class="hero-stage">
-          <img
-            class="hero-ribbon"
-            src="assets/blue-ribbon.png"
-            width="1536"
-            height="1024"
-            alt=""
-            fetchpriority="high"
-          />
-          <h1 class="display hero-title" id="hero-title">
-            <span>HELLO,</span><span>I’M MAT.</span>
-          </h1>
-          <div class="sticker sticker-spark" aria-hidden="true">
-            <svg viewBox="0 0 150 150">
-              <path
-                d="M75 4l12 34 29-21-3 36 35 8-30 20 22 29-36-2-9 35-20-29-28 23 1-37-35-9 29-20-23-28 37 1z"
-                fill="#ffd731"
-                stroke="#000"
-                stroke-width="1.5"
-              />
-              <path
-                d="M57 64v12m30-12v12m-27 11q13 13 26-1"
-                fill="none"
-                stroke="#000"
-                stroke-width="3"
-                stroke-linecap="round"
-              />
-            </svg>
+      <section class="masthead" id="home" aria-labelledby="blog-title">
+        <div class="content-width masthead-inner">
+          <div class="section-kicker">
+            <span>A BLOG BY MAT11-OO</span
+            ><span>NOTES, IDEAS &amp; OTHER CURIOSITIES.</span>
           </div>
-          <div class="sticker sticker-smile" aria-hidden="true">
-            <svg viewBox="0 0 120 120">
-              <circle
-                cx="60"
-                cy="60"
-                r="57"
-                fill="#fb4903"
-                stroke="#000"
-                stroke-width="1.5"
-              />
-              <path
-                d="M38 39v15m40-15v15M31 70q29 34 58 0"
-                fill="none"
-                stroke="#000"
-                stroke-width="6"
-                stroke-linecap="round"
-              />
-            </svg>
-          </div>
-          <div class="sticker sticker-idea" aria-hidden="true">
-            GOOD<br />IDEAS<br />AHEAD<span>↗</span>
-          </div>
-          <div class="sticker sticker-curious" aria-hidden="true">
-            <span>100% CURIOUS</span><strong>一点好奇<br />无限可能</strong
-            ><span>✳ ALWAYS EXPLORING ✳</span>
-          </div>
-        </div>
-        <div class="hero-intro">
-          <p>
-            欢迎来到我的灵感游乐场。<br /><span
-              >记录创作、收藏想法，偶尔也放空一下。</span
-            >
-          </p>
-          <div class="hero-actions">
-            <a class="pill pill-black" href="#work"
-              >来看看我的作品 <span aria-hidden="true">↗</span></a
-            ><a class="pill circle-pill" href="#about" aria-label="向下了解我"
-              >↓</a
+          <div class="masthead-poster">
+            <h1 class="display" id="blog-title">MIND POPS<span>.</span></h1>
+            <img
+              class="masthead-ribbon"
+              src="assets/blue-ribbon.png"
+              width="1536"
+              height="1024"
+              alt=""
+              fetchpriority="high"
+            /><span class="masthead-sticker" aria-hidden="true"
+              >READ.<br />THINK.<br />REPEAT. <b>↗</b></span
             >
           </div>
-        </div>
-        <div class="hero-bottom content-width">
-          <span>SCROLL TO EXPLORE ↓</span
-          ><span>A WORK IN PROGRESS, JUST LIKE ME.</span>
+          <div class="masthead-bottom">
+            <p>把想法写下来，<span>也把世界看清一点。</span></p>
+            <span class="small-pill"
+              >AI 工具 <i>✳</i> 行业观察 <i>✳</i> 产品实践</span
+            >
+          </div>
         </div>
       </section>
-      <section class="work section-pad" id="work" aria-labelledby="work-title">
-        <div class="content-width">
-          <div class="section-kicker">
-            <span>01 / THINGS I MAKE</span
-            ><span class="small-pill">想法，动起来。</span>
-          </div>
-          <div class="section-title-row">
-            <h2 class="display section-title" id="work-title">
-              GOOD STUFF<span class="title-dot">.</span>
-            </h2>
-            <p>
-              一些创作，一些探索。<br />把脑袋里的「万一呢」，变成眼前的「就是它」。
-            </p>
-          </div>
-          <div class="project-grid">
-            <button
-              class="project-card project-site"
-              data-detail="website"
-              aria-label="查看个人网站项目详情"
+
+      <section
+        class="featured-section content-width"
+        aria-labelledby="featured-title"
+      >
+        <div class="section-kicker">
+          <h2 id="featured-title">✳ 精选阅读 / PICK OF THE BLOG</h2>
+          <a class="inline-link" href="#articles">浏览全部文章 ↓</a>
+        </div>
+        <a
+          class="featured-card"
+          href="https://mp.weixin.qq.com/s/R56d-aIISFxM5_NYPZd66w"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><div class="featured-image">
+            <img
+              src="assets/blog-shared-wallet.svg"
+              width="960"
+              height="600"
+              alt=""
+            /><span class="cover-sticker" aria-hidden="true"
+              >MAT’S<br />NOTES ↗</span
             >
-              <span class="project-art site-art"
-                ><span class="art-caption">MY LITTLE INTERNET HOME</span
-                ><span class="mini-browser"
-                  ><span class="browser-bar"
-                    ><i></i><i></i><i></i><span>mat11-oo.github.io</span></span
-                  ><span class="mini-display">HELLO,<br />I’M MAT.</span
-                  ><img
-                    src="assets/blue-ribbon.png"
-                    width="1536"
-                    height="1024"
-                    alt=""
-                    loading="lazy"
-                  /><span class="mini-pill">COME ON IN ↗</span></span
-                ><span class="site-sticker" aria-hidden="true">✳</span
-                ><span class="art-foot">BUILT WITH CURIOSITY.</span></span
-              ><span class="project-info"
-                ><span
-                  ><span class="project-category">WEB DESIGN / DEVELOPMENT</span
-                  ><strong>我的线上自留地</strong
-                  ><span class="project-description"
-                    >从一个想法，到一个可以被访问的世界。</span
-                  ></span
-                ><span class="project-arrow" aria-hidden="true">↗</span></span
+          </div>
+          <div class="featured-copy">
+            <div class="post-meta">
+              <span>AI 工具</span><span>使用成本</span>
+            </div>
+            <h3>
+              当 ChatGPT 和 Codex 要在一个钱包里花钱了：AI 时代的精细化过冬
+            </h3>
+            <div class="featured-byline">
+              <span class="mini-mark" aria-hidden="true">m.</span
+              ><span>MAT11—OO <small>微信公众号</small></span>
+            </div>
+            <span class="featured-bottom"
+              >阅读这篇文章
+              <span class="arrow-circle" aria-hidden="true">↗</span></span
+            >
+          </div></a
+        >
+      </section>
+
+      <section
+        class="reading-section content-width"
+        id="articles"
+        aria-labelledby="articles-title"
+      >
+        <span id="notes" class="anchor-alias" aria-hidden="true"></span>
+        <div class="reading-heading">
+          <div>
+            <span class="eyebrow">THE READING ROOM</span>
+            <h2 id="articles-title">写下来，就有了形状<span>.</span></h2>
+          </div>
+          <span
+            class="reading-count"
+            id="article-count"
+            role="status"
+            aria-live="polite"
+            >共 3 篇文章</span
+          >
+        </div>
+        <div class="reading-layout">
+          <div class="article-panel">
+            <div class="reading-controls" hidden>
+              <div
+                class="filter-group"
+                role="group"
+                aria-label="按文章分类筛选"
               >
-            </button>
-            <button
-              class="project-card project-garden"
-              data-detail="garden"
-              aria-label="查看灵感花园示例项目详情"
-            >
-              <span class="project-art garden-art"
-                ><span class="art-caption">A PLACE FOR ALL THE WHAT-IFS</span
-                ><span class="garden-display">IDEA<br />GARDEN.</span
-                ><svg
-                  class="flower-sticker"
-                  viewBox="0 0 180 180"
-                  aria-hidden="true"
+                <button
+                  class="filter-pill"
+                  data-filter="all"
+                  aria-pressed="true"
                 >
-                  <path
-                    d="M90 57C49-16 3 45 57 82c-81 3-54 80 13 48-10 79 70 66 56-9 67 35 93-42 13-47 52-54-18-97-49-17z"
-                    fill="#fb4903"
-                    stroke="#000"
-                    stroke-width="1.5"
-                  />
-                  <circle
-                    cx="96"
-                    cy="92"
-                    r="26"
-                    fill="#ffd731"
-                    stroke="#000"
-                    stroke-width="1.5"
-                  />
-                  <path
-                    d="M87 86v7m19-7v7m-18 8q8 7 16 0"
-                    fill="none"
-                    stroke="#000"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                  /></svg
-                ><span class="idea-label"
-                  >COLLECT.<br />CONNECT.<br />CREATE.</span
-                ><span class="art-foot">概念探索 / 示例作品</span></span
-              ><span class="project-info"
-                ><span
-                  ><span class="project-category"
-                    >PERSONAL CONCEPT / INSPIRATION</span
-                  ><strong>灵感花园</strong
-                  ><span class="project-description"
-                    >给那些暂时没用的好点子，一个生长的地方。</span
-                  ></span
-                ><span class="project-arrow" aria-hidden="true">↗</span></span
-              >
-            </button>
-          </div>
-          <div class="work-bottom">
-            <span>SMALL STEPS. REAL THINGS.</span
-            ><a
-              class="pill"
-              href="https://github.com/Mat11-oo"
-              target="_blank"
-              rel="noopener noreferrer"
-              >更多探索，在 GitHub <span aria-hidden="true">↗</span></a
-            >
-          </div>
-        </div>
-      </section>
-      <section
-        class="about section-pad"
-        id="about"
-        aria-labelledby="about-title"
-      >
-        <div class="content-width">
-          <div class="section-kicker">
-            <span>02 / THE HUMAN BEHIND THE SCREEN</span
-            ><span>HI AGAIN, I’M MAT11-OO.</span>
-          </div>
-          <div class="about-layout">
-            <div class="about-poster">
-              <h2 class="display" id="about-title">
-                A LITTLE<br />ABOUT<br /><span>ME.</span>
-              </h2>
-              <img
-                class="about-ribbon"
-                src="assets/blue-ribbon.png"
-                width="1536"
-                height="1024"
-                alt=""
-                loading="lazy"
-              /><span class="about-sticker" aria-hidden="true"
-                >STILL<br />FIGURING<br />IT OUT. <b>✳</b></span
-              >
-            </div>
-            <div class="about-copy">
-              <span class="small-pill about-hi">✳ 一个持续更新中的自己</span>
-              <h3>不被定义，<br />一直好奇。</h3>
-              <p>
-                比起急着给自己贴上标签，我更想亲手试试：把一个想法做出来，把一个问题想明白，再去发现下一个有意思的东西。
-              </p>
-              <p>
-                这里是我的个人空间。放作品，写想法，也给那些还没成形的灵感留个位置。慢慢探索，认真玩。
-              </p>
-              <div class="about-tags">
-                <span>动手创造 ↗</span><span>持续学习 ✳</span
-                ><span>保持开放 ◌</span>
+                  全部 <span data-count="all">3</span></button
+                ><button
+                  class="filter-pill"
+                  data-filter="tools"
+                  aria-pressed="false"
+                >
+                  AI 工具 <span data-count="tools">1</span></button
+                ><button
+                  class="filter-pill"
+                  data-filter="industry"
+                  aria-pressed="false"
+                >
+                  行业观察 <span data-count="industry">2</span>
+                </button>
               </div>
-              <div class="about-signature">
-                Less overthinking. More making.<span>↴</span>
-              </div>
+              <form class="search-form" role="search">
+                <label class="sr-only" for="article-search"
+                  >搜索文章标题或关键词</label
+                ><span class="search-icon" aria-hidden="true">⌕</span
+                ><input
+                  id="article-search"
+                  type="search"
+                  placeholder="搜索标题或关键词"
+                  autocomplete="off"
+                /><button
+                  class="clear-search"
+                  type="button"
+                  aria-label="清除搜索"
+                  hidden
+                >
+                  ×
+                </button>
+              </form>
+            </div>
+            <div class="post-list">
+              <article
+                class="post"
+                data-category="tools"
+                data-tags="AI 工具 使用成本 ChatGPT Codex"
+              >
+                <a
+                  class="post-link"
+                  href="https://mp.weixin.qq.com/s/R56d-aIISFxM5_NYPZd66w"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><div class="post-thumbnail">
+                    <img
+                      src="assets/blog-shared-wallet.svg"
+                      width="960"
+                      height="600"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="post-copy">
+                    <div class="post-meta">
+                      <span>AI 工具</span><span class="post-index">NO. 01</span>
+                    </div>
+                    <h3 class="post-title">
+                      当 ChatGPT 和 Codex 要在一个钱包里花钱了：AI
+                      时代的精细化过冬
+                    </h3>
+                    <div class="post-bottom">
+                      <span>#ChatGPT <span>#Codex</span></span
+                      ><span class="post-read"
+                        >微信原文 <b aria-hidden="true">↗</b></span
+                      >
+                    </div>
+                  </div></a
+                >
+              </article>
+              <article
+                class="post"
+                data-category="industry"
+                data-tags="AI 行业观察 四巨头"
+              >
+                <a
+                  class="post-link"
+                  href="https://mp.weixin.qq.com/s/iU-H9b4l1zz94Wy8IZ-3CA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><div class="post-thumbnail">
+                    <img
+                      src="assets/blog-fair-play.svg"
+                      width="960"
+                      height="600"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="post-copy">
+                    <div class="post-meta">
+                      <span>行业观察</span
+                      ><span class="post-index">NO. 02</span>
+                    </div>
+                    <h3 class="post-title">AI 四巨头，突然开始讲武德了</h3>
+                    <div class="post-bottom">
+                      <span>#AI <span>#行业观察</span></span
+                      ><span class="post-read"
+                        >微信原文 <b aria-hidden="true">↗</b></span
+                      >
+                    </div>
+                  </div></a
+                >
+              </article>
+              <article
+                class="post"
+                data-category="industry"
+                data-tags="AI 行业观察 OpenAI 科技商业 投资"
+              >
+                <a
+                  class="post-link"
+                  href="https://mp.weixin.qq.com/s/Xy8u5FnnJ-aeGzPuL8l0Iw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><div class="post-thumbnail">
+                    <img
+                      src="assets/blog-front-door.svg"
+                      width="960"
+                      height="600"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="post-copy">
+                    <div class="post-meta">
+                      <span>行业观察</span
+                      ><span class="post-index">NO. 03</span>
+                    </div>
+                    <h3 class="post-title">
+                      花 1000 亿买下“看门大爷”：OpenAI 的金主盯上了你家大门口
+                    </h3>
+                    <div class="post-bottom">
+                      <span>#OpenAI <span>#科技商业</span></span
+                      ><span class="post-read"
+                        >微信原文 <b aria-hidden="true">↗</b></span
+                      >
+                    </div>
+                  </div></a
+                >
+              </article>
+            </div>
+            <div class="empty-state" hidden>
+              <span aria-hidden="true">✳</span>
+              <h3>这个关键词，还没写到。</h3>
+              <p>换个关键词，或者回来看看全部文章。</p>
+              <button class="pill pill-black" id="reset-filters">
+                查看全部文章 ↗
+              </button>
+            </div>
+            <div class="archive-foot">
+              <span>ALL CAUGHT UP. STAY CURIOUS.</span
+              ><a
+                class="inline-link"
+                href="https://github.com/Mat11-oo/Mat11-oo/blob/main/ARTICLES.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                >文章索引 ↗</a
+              >
             </div>
           </div>
-        </div>
-      </section>
-      <section
-        class="notes section-pad"
-        id="notes"
-        aria-labelledby="notes-title"
-      >
-        <div class="content-width">
-          <div class="section-kicker">
-            <span>03 / NOTES FROM MY HEAD</span
-            ><span class="small-pill">不定期，随便写写。</span>
-          </div>
-          <div class="section-title-row">
-            <h2 class="display section-title" id="notes-title">
-              MIND POPS<span class="title-dot">.</span>
-            </h2>
-            <p>有时候，想法需要一个出口。<br />不必完整，先记下来再说。</p>
-          </div>
-          <div class="notes-grid">
-            <a
-              class="note-card note-lavender note-article"
-              href="https://mp.weixin.qq.com/s/R56d-aIISFxM5_NYPZd66w"
-              target="_blank"
-              rel="noopener noreferrer"
+          <aside class="sidebar" aria-label="作者、分类与公众号">
+            <section
+              class="author-card"
+              id="about"
+              aria-labelledby="about-title"
             >
-              <span class="note-meta"
-                >01 / 公众号文章 <span>微信原文</span></span
-              ><span class="note-art note-star" aria-hidden="true">✳</span
-              ><strong
-                >当 ChatGPT 和 Codex 要在一个钱包里花钱了：AI
-                时代的精细化过冬</strong
-              ><span class="note-bottom"
-                >在新标签页中阅读 <span aria-hidden="true">↗</span></span
-              >
-            </a>
-            <button class="note-card note-mint" data-detail="daily">
-              <span class="note-meta">02 / 生活切片 <span>示例随笔</span></span
-              ><span class="note-art note-eyes" aria-hidden="true"
-                ><i></i><i></i></span
-              ><strong>普通的一天，<br />也有新鲜事。</strong
-              ><span class="note-bottom"
-                >留意那些微小的瞬间 <span aria-hidden="true">↗</span></span
-              >
-            </button>
-            <button class="note-card note-blue" data-detail="space">
-              <span class="note-meta">03 / 学习手记 <span>示例随笔</span></span
-              ><span class="note-art note-doodle" aria-hidden="true">↝</span
-              ><strong>给生活，<br />留一点空白。</strong
-              ><span class="note-bottom"
-                >让灵感有地方停下来 <span aria-hidden="true">↗</span></span
-              >
-            </button>
-          </div>
-        </div>
-      </section>
-      <section
-        class="contact section-pad"
-        id="contact"
-        aria-labelledby="contact-title"
-      >
-        <div class="content-width">
-          <div class="section-kicker">
-            <span>HAVE A GOOD IDEA? OR JUST A HELLO?</span
-            ><span>THE INTERNET IS BETTER WITH FRIENDS.</span>
-          </div>
-          <div class="contact-layout">
-            <div class="contact-title-wrap">
-              <h2 class="display" id="contact-title">
-                LET’S<br />TALK<span class="title-dot">.</span>
-              </h2>
-              <svg
-                class="contact-spark"
-                viewBox="0 0 150 150"
-                aria-hidden="true"
-              >
-                <path
-                  d="M75 4l12 34 29-21-3 36 35 8-30 20 22 29-36-2-9 35-20-29-28 23 1-37-35-9 29-20-23-28 37 1z"
-                  fill="#ffd731"
-                  stroke="#000"
-                  stroke-width="1.5"
-                />
-              </svg>
-            </div>
-            <div class="contact-copy">
-              <span class="small-pill">一起，让好点子发生。</span>
+              <div class="sidebar-kicker">THE HUMAN BEHIND THE WORDS</div>
+              <div class="author-heading">
+                <span class="author-avatar" aria-hidden="true">m.</span>
+                <div>
+                  <h2 id="about-title">你好，我是 Mat。</h2>
+                  <span>MAT11—OO / 持续好奇中</span>
+                </div>
+              </div>
               <p>
-                关于创作、灵感，或者任何有趣的事。<br />来 GitHub
-                找我，看看我最近在折腾什么。
+                我关注 AI 工具、产品和创作。用项目验证想法，也用文章记录观察。
               </p>
+              <div class="author-tags">
+                <span>AI 产品探索</span><span>Agent Skills</span
+                ><span>中文内容创作</span>
+              </div>
               <a
-                class="pill pill-black contact-link"
+                class="pill"
                 href="https://github.com/Mat11-oo"
                 target="_blank"
                 rel="noopener noreferrer"
-                >在 GitHub 找到我 <span aria-hidden="true">↗</span></a
-              ><button class="copy-link" id="copy-link">
-                复制网站链接 <span aria-hidden="true">⧉</span></button
-              ><span
-                class="copy-status"
-                role="status"
-                aria-live="polite"
-              ></span>
+                >去我的 GitHub <span aria-hidden="true">↗</span></a
+              >
+            </section>
+            <section
+              class="topics-card"
+              id="topics"
+              aria-labelledby="topics-title"
+            >
+              <div class="sidebar-kicker">FIND YOUR NEXT READ</div>
+              <h2 id="topics-title">从一个主题开始。</h2>
+              <div class="topic-links">
+                <a href="#articles" data-topic="tools"
+                  ><span><i class="topic-dot dot-violet"></i>AI 工具</span
+                  ><span>01 ↗</span></a
+                ><a href="#articles" data-topic="industry"
+                  ><span><i class="topic-dot dot-orange"></i>行业观察</span
+                  ><span>02 ↗</span></a
+                ><a href="#work"
+                  ><span><i class="topic-dot dot-blue"></i>产品实践</span
+                  ><span>项目 ↗</span></a
+                >
+              </div>
+            </section>
+            <section
+              class="wechat-card"
+              id="wechat"
+              aria-labelledby="wechat-title"
+            >
+              <div class="sidebar-kicker">KEEP THE CONVERSATION GOING</div>
+              <h2 id="wechat-title">也在公众号，<br />继续聊聊。</h2>
+              <div class="wechat-inner">
+                <a
+                  href="assets/wechat-account-qr.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="在新标签页打开完整公众号二维码"
+                  ><img
+                    src="assets/wechat-account-qr.jpg"
+                    width="430"
+                    height="430"
+                    alt="微信公众号二维码"
+                    loading="lazy"
+                /></a>
+                <div>
+                  <p>用微信扫一扫，<br />进入我的公众号。</p>
+                  <a
+                    class="inline-link"
+                    href="assets/wechat-account-qr.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >放大二维码 ↗</a
+                  >
+                </div>
+              </div>
+              <span class="wechat-id">原始 ID：gh_0a0e80b7d682</span>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <section class="build-section" id="work" aria-labelledby="work-title">
+        <div class="content-width">
+          <div class="build-heading">
+            <div>
+              <span class="eyebrow">SOME IDEAS BECOME THINGS</span>
+              <h2 id="work-title">除了写，也动手做<span>✳</span></h2>
             </div>
+            <a
+              class="pill"
+              href="https://github.com/Mat11-oo?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              >全部项目 <span aria-hidden="true">↗</span></a
+            >
           </div>
-          <footer class="footer">
-            <a class="brand" href="#home"
-              ><span class="brand-mark">m.</span><span>MAT11—OO</span></a
-            ><span>MADE WITH CURIOSITY. © <span id="year">2026</span></span
-            ><a class="pill back-top" href="#home">BACK TO TOP ↑</a>
-          </footer>
+          <div class="build-grid">
+            <a
+              class="build-card"
+              href="https://github.com/Mat11-oo/ai-product-teardown"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="build-icon icon-blue" aria-hidden="true">⌘</span>
+              <div>
+                <span class="build-type">SKILL / 产品分析</span>
+                <h3>AI 产品拆解</h3>
+                <p>场景、人机分工、Agent 与模型成本。</p>
+              </div>
+              <span class="build-arrow" aria-hidden="true">↗</span></a
+            ><a
+              class="build-card"
+              href="https://github.com/Mat11-oo/matt-xhs-studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="build-icon icon-lavender" aria-hidden="true"
+                >▤</span
+              >
+              <div>
+                <span class="build-type">SKILL / 预览版</span>
+                <h3>Matt XHS Studio</h3>
+                <p>小红书图文策划与知识卡片工作流。</p>
+              </div>
+              <span class="build-arrow" aria-hidden="true">↗</span></a
+            ><a
+              class="build-card"
+              href="https://github.com/Mat11-oo/bodian-music-showcase"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="build-icon icon-mint" aria-hidden="true">◎</span>
+              <div>
+                <span class="build-type">WEB / 交互探索</span>
+                <h3>波点音乐 · 声影单页</h3>
+                <p>粒子空间、黑胶唱片与沉浸式交互。</p>
+              </div>
+              <span class="build-arrow" aria-hidden="true">↗</span></a
+            ><a
+              class="build-card"
+              href="https://github.com/Mat11-oo/qingyang-health-m02"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="build-icon icon-orange" aria-hidden="true">↗</span>
+              <div>
+                <span class="build-type">FULL STACK / 本地联调</span>
+                <h3>轻养健康 · M02</h3>
+                <p>健康记录、前后端接口与个人看板。</p>
+              </div>
+              <span class="build-arrow" aria-hidden="true">↗</span></a
+            >
+          </div>
         </div>
       </section>
     </main>
-    <dialog id="detail-dialog" aria-labelledby="dialog-title">
-      <div class="dialog-top">
-        <span id="dialog-label"></span
-        ><button class="close-dialog pill circle-pill" aria-label="关闭窗口">
-          ×
-        </button>
+    <footer class="site-footer">
+      <div class="content-width">
+        <div class="footer-top">
+          <div>
+            <span class="eyebrow"
+              >THERE’S ALWAYS SOMETHING TO THINK ABOUT.</span
+            >
+            <p>
+              保持好奇，<br /><strong>继续写下去。</strong
+              ><span aria-hidden="true">✳</span>
+            </p>
+          </div>
+          <a class="pill pill-black" href="#articles"
+            >再读一篇 <span aria-hidden="true">↑</span></a
+          >
+        </div>
+        <div class="footer-bottom">
+          <a class="brand" href="#home"
+            ><span class="brand-mark">m.</span
+            ><span>MAT11—OO<small>MIND POPS / PERSONAL BLOG</small></span></a
+          ><span>© <span id="year">2026</span> · MADE WITH CURIOSITY.</span
+          ><a class="inline-link" href="#home">回到顶部 ↑</a>
+        </div>
       </div>
-      <h2 id="dialog-title"></h2>
-      <div id="dialog-body"></div>
-      <div class="dialog-actions">
-        <a
-          class="pill"
-          id="dialog-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          hidden
-          >查看项目 ↗</a
-        ><button class="pill pill-black dialog-done">读完了，继续逛 ↗</button>
-      </div>
-    </dialog>
+    </footer>
   </body>
 </html>

@@ -1,20 +1,24 @@
-# 我的个人空间
+# Mat11-oo 的博客 · MIND POPS
 
-个人网站，使用 HTML、CSS 和 JavaScript 编写，无需安装依赖或构建。
+以文章阅读为主的个人博客，使用 HTML、CSS 和 JavaScript 编写，无需安装依赖或构建。
 
 网站地址：<https://mat11-oo.github.io/>
 
 ## 修改网站
 
-- `dist/index.html`：个人介绍、作品卡片、页面结构。
+- `dist/index.html`：精选文章、文章列表、主题分类、作者介绍与项目入口。
 - `dist/style.css`：配色、排版及手机布局。
-- `dist/script.js`：作品与随笔弹窗内容、联系入口。
+- `dist/script.js`：文章分类、关键词搜索、无结果提示与手机导航。
 
-网站使用 GitHub 名称 Mat11-oo，联系入口指向真实 GitHub 主页。灵感花园和三篇随笔为示例内容，可根据实际情况替换。
+网站使用 GitHub 名称 Mat11-oo，收录三篇已确认标题和链接的公众号文章。文章卡片直接打开微信原文，公众号二维码来自已核验的微信官方入口。
+
+新增文章时，在 `dist/index.html` 的 `.post-list` 中添加一个 `.post`，填写标题、链接、`data-category` 和搜索关键词 `data-tags`。现有分类为 `tools`（AI 工具）和 `industry`（行业观察）；筛选数量自动从列表计算。无 JavaScript 时，文章列表仍可正常阅读与跳转。
 
 ## 视觉与素材
 
 根据提供的 Slush 风格参考设计：浅蓝画布、超大标题、彩色贴纸、黑色细描边及胶囊按钮。字体 Anton 随站点加载，许可见 `dist/assets/OFL-Anton.txt`。
+
+`blog-shared-wallet.svg`、`blog-fair-play.svg` 和 `blog-front-door.svg` 是围绕文章标题绘制的主题插画，不是原文封面或页面截图。
 
 蓝色曲线由内置 ImageGen 生成，保存在 `dist/assets/blue-ribbon.png`。使用的生成提示词：
 
