@@ -774,6 +774,7 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   text-align: left;
+  border: 1px solid var(--ink);
   border-radius: 24px;
   padding: 23px;
   min-width: 0;
@@ -1676,4 +1677,18 @@ body:has(dialog[open]) {
   *::after {
     transition: none !important;
   }
+}
+
+/* Article titles remain readable at all card widths. */
+.note-article > strong {
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  margin-top: 15px;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.45;
+}
+.note-article .note-art {
+  position: static;
+  height: 118px;
+  margin-top: 6px;
 }
